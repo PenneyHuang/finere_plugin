@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+  <id>com.fr.plugin.tabledata.ws</id>
+  <name><![CDATA[数据集ws插件]]></name>
+  <active>yes</active>
+  <version>1.0</version>
+  <env-version>10.0</env-version>
+  <jartime>2018-07-31</jartime>
+  <vendor>author</vendor>
+  <description><![CDATA[数据集插件]]></description>
+  <change-notes><![CDATA[
+      [2018-08-01]修改一点问题。<br/>
+      [2018-07-31]初始化插件。<br/>
+    ]]></change-notes>
+  <extra-designer>
+    <TableDataDefineProvider class="com.fr.plugin.tabledata.ws.WsTableDataScriptDefine"/>
+  </extra-designer>
+  <function-recorder class="com.fr.plugin.tabledata.ws.core.WsTableData"/>
+</plugin>
