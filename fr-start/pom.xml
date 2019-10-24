@@ -8,6 +8,8 @@
     <version>1.0</version>
     <modules>
         <module>plugin-tabledata-ws</module>
+        <module>plugin-JSSCSSInput</module>
+        <module>plugin-resource-redef</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

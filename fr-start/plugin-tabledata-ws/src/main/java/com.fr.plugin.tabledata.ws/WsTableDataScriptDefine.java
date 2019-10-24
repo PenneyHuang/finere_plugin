@@ -44,6 +44,6 @@ public class WsTableDataScriptDefine extends AbstractTableDataDefineProvider {
 
   @Override
   public String iconPathForTableData() {
-    return "/com/fr/plugin/tabledata/ws/images/json.png";
+    return "images/json.png";
   }
 }

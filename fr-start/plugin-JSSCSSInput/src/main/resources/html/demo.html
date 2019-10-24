@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>fineUi例子</title>
+    <link rel="stylesheet" type="text/css" href="http://fanruan.design/fineui/2.0/fineui.min.css"/>
+    <script src="http://fanruan.design/fineui/2.0/fineui.min.js"></script>
+</head>
+<body>
+<script>
+    BI.createWidget({
+        type: "bi.absolute",
+        element: "body",
+        items: [{
+            el: {
+                type: "bi.button",
+                text: "这是一个按钮"
+            },
+            left: 100,
+            top: 100
+        }]
+    })
+
+
+    !(function () {
+        /**
+         * 该组件表示一个input输入框，当change时外面会监听到chang事件和值
+         */
+        var Input = BI.inherit(BI.Widget, {
+            props: {
+                tagName: "input"// html标签名称
+            },
+            mounted: function () {
+                var self = this;
+                // 给元素绑定change事件
+                this.element.change(function (e) {
+                    self.fireEvent("EVENT_CHANGE", e.delegateTarget.value);
+                });
+            },
+            render: function () {
+                // 因为当前元素本身就是一个元素，而且也没有子元素，所以这里不用写任何东西就表示了一个input输入框
+            }
+        });
+        BI.shortcut("my.input", Input);
+    })();
+
+    !(function () {
+        /**
+         * 容器组件
+         */
+        var Container = BI.inherit(BI.Widget, {
+            props: {
+                baseCls: "container"// 给该组件加一个基础样式
+            },
+            render: function () {
+                return {
+                    type: "bi.vertical",// 通过纵向布局将两个input输入框组件放到我们的容器组件中
+                    items: [{
+                        type: "my.input",
+                        listeners: [{
+                            eventName: "EVENT_CHANGE",
+                            action: function () {
+                                console.log("第一个input输入框内容发生了变化");
+                            }
+                        }]
+                    }, {
+                        type: "my.input",
+                        listeners: [{
+                            eventName: "EVENT_CHANGE",
+                            action: function () {
+                                console.log("第二个input输入框内容发生了变化");
+                            }
+                        }]
+                    }]
+                };
+            }
+        });
+        BI.shortcut("my.container", Container);
+    })();
+
+
+    BI.createWidget({
+        type: "my.container",
+        element: "body"
+    })
+
+</script>
+</body>
+</html>

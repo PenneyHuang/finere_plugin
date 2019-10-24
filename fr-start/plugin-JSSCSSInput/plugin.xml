@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.JSCSSInput</id>
+    <name><![CDATA[引入CSSInput插件]]></name>
+    <active>yes</active>
+    <version>1.0</version>
+    <env-version>10.0</env-version>
+    <jartime>2018-07-31</jartime>
+    <vendor>author</vendor>
+    <description><![CDATA[前端插件]]></description>
+    <change-notes><![CDATA[
+      [2018-08-01]修改一点问题。<br/>
+      [2018-07-31]初始化插件。<br/>
+    ]]></change-notes>
+    <extra-designer>
+        <WebResourceProvider class="com.fr.plugin.JSCSSInput.provider.JSCSSProvider"/>
+    </extra-designer>
+    <function-recorder class="com.fr.plugin.JSCSSInput.component.FileDef"/>
+</plugin>
