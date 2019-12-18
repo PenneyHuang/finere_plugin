@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        .main {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            right: 10%;
+            margin: auto;
+        }
+
+        .main div {
+            text-align: center;
+        }
+
+        #header-content {
+            min-width: 40%;
+            min-height: 40%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .simple-message {
+            font-weight: 500;
+            width: 100%;
+            font-size: 28px;
+            color: #3685f2;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 40px;
+        }
+
+        .detail-message {
+            font-size: 16px;
+            color: #ff4949;
+            margin: 15px auto;
+            line-height: 24px;
+        }
+
+        .solution {
+            font-size: 16px;
+            color: #ff4949;
+            line-height: 24px;
+        }
+
+        .login {
+            color: #3685f2;
+            text-decoration: none;
+            line-height: 24px;
+            float: right;
+            height: 24px;
+            font-size: 12px;
+            margin-right: 40px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--<a href="${fineServletURL}/login${origin}" class="login">${switchAccount}</a>-->
+<div class="main">
+    <div>
+        <img id="header-content"
+             src="${fineServletURL}/resources?path=/com/fr/web/resources/dist/images/1x/background/error_page.png" alt="error page">
+    </div>
+    <div class="simple-message">
+        ${result}
+    </div>
+    <div class="detail-message">
+        ${reason}
+    </div>
+    <div class="solution">
+        ${solution}
+    </div>
+</div>
+</body>
+</html>

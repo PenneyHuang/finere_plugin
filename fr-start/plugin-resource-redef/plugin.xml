@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.plugin.resource.redef</id>
+    <name><![CDATA[资源替换插件]]></name>
+    <active>yes</active>
+    <version>1.0</version>
+    <env-version>10.0</env-version>
+    <jartime>2018-07-31</jartime>
+    <vendor>penney</vendor>
+    <description><![CDATA[资源替换插件]]></description>
+    <change-notes><![CDATA[]]></change-notes>
+    <extra-core>
+        <ResourcePathTransformer class="com.fr.plugin.resource.redef.ReDef"/>
+        <ResourcePathTransformer class="com.fr.plugin.resource.redef.IndexRef"/>
+    </extra-core>
+    <function-recorder class="com.fr.plugin.resource.redef.ReDef"/>
+    <function-recorder class="com.fr.plugin.resource.redef.IndexRef"/>
+</plugin>

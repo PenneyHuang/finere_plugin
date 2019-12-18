@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+    <id>com.fr.plugin.locale</id>
+    <name><![CDATA[国际化插件]]></name>
+    <active>yes</active>
+    <version>1.0</version>
+    <env-version>10.0</env-version>
+    <jartime>2018-07-31</jartime>
+    <vendor>author</vendor>
+    <description><![CDATA[国际化插件]]></description>
+    <change-notes><![CDATA[
+      [2019-12-02]创建插件。<br/>
+    ]]></change-notes>
+    <extra-core>
+        <LocaleFinder class="com.fr.plugin.locale.DemoLocaleFinder"/>
+    </extra-core>
+    <function-recorder class="com.fr.plugin.locale.DemoLocaleFinder"/>
+</plugin>

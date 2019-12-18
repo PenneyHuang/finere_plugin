@@ -13,6 +13,17 @@
     line-height: 40px;
 }
 
+.plugin-mobile-demo {
+    width: 150px;
+    height: 40px;
+    background: blue;
+    position: absolute;
+    color: red;
+    font-size: 23px;
+    text-align: center;
+    line-height: 40px;
+}
+
 .dec-header {
     background-color: #34c16b !important;
 }

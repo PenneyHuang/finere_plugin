@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="FineReport" />
+    <meta name="Copyright" content="FineReport" />
+    <meta name="description" content="FineReport--Web Reporting Tool" />
+    <meta name="keywords" content="FineReport,Web Reporting Tool" />
+    <title></title>
+    <style type="text/css">
+        body {
+            overflow: auto;
+            font-family: "Myriad Pro", "OpenSans", Verdana, "PingFang SC", "Microsoft YaHei", sans-serif
+        }
+
+        div::-webkit-scrollbar,
+        textarea::-webkit-scrollbar {
+            -webkit-appearance: none;
+            background-color: rgba(102, 102, 102, .05);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0d666666, endColorstr=#0d666666);
+            width: 6px;
+            height: 6px
+        }
+
+        div::-webkit-scrollbar-thumb,
+        textarea::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            background-color: rgba(102, 102, 102, .3);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d666666, endColorstr=#4d666666)
+        }
+
+        div::-webkit-scrollbar-thumb:hover,
+        textarea::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(102, 102, 102, .7);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#b3666666, endColorstr=#b3666666)
+        }
+
+        #wrapper {
+            margin: 0 10% 0 10%;
+            width: 80%
+        }
+
+        #header {
+            text-align: center
+        }
+
+        #header-content {
+            position: relative;
+            top: 5%;
+            min-width: 40%;
+            min-height: 40%;
+            max-width: 100%;
+            max-height: 100%
+        }
+
+        #detail {
+            position: relative;
+            width: 540px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .tab {
+            display: inline-block;
+            float: left;
+            font-weight: 600;
+            font-size: 14px;
+            width: 270px;
+            height: 34px;
+            border: 0 solid #1d91da;
+            border-top-width: 2px;
+            text-align: center;
+            line-height: 34px;
+            cursor: pointer
+        }
+
+        .tab-selected {
+            color: #1d91da;
+            background-color: #f9fafc
+        }
+
+        .tab-content {
+            border: 2px solid #f2f4f7;
+            border-top-width: 0;
+            background-color: white;
+            width: 536px;
+            height: 240px;
+            font-size: 12px;
+            color: #898989;
+            overflow: auto;
+        }
+
+        #solution {
+            display: none;
+        }
+
+        div #solution-tab {
+            margin-left: 0
+        }
+
+        pre {
+            margin-left: 30px;
+            margin-right: 30px;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word
+        }
+
+        #tip {
+            font-weight: 500;
+            width: 100%;
+            font-size: 28px;
+            color: #3685f2;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-top: 21px
+        }
+
+        #tip,
+        #tip-oops,
+        #tip-detail {
+            display: inline-block
+        }
+
+        #detail-message {
+            font-size: 16px;
+            color: #ff4949;
+            letter-spacing: 0;
+            line-height: 24px
+        }
+
+        #detail-content {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #000;
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: center
+        }
+
+        pre>p,
+        pre>h2,
+        pre>li {
+            text-indent: 0;
+            color: #3D4D66;
+        }
+
+        pre>p>a {
+            color: #3685F2;
+        }
+    </style>
+    <script type="text/javascript" src="${fineServletURL}/file?path=com.fr.decision.web.i18n.NormalTextGenerator&type=class&parser=plain"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div>
+            <div>
+                <div id="header">
+                    <img id="header-content" src="${fineServletURL}/resources?path=/com/fr/web/resources/dist/images/2x/background/error_page.png" alt="error page">
+                </div>
+                <div id="tip">
+                    <div id="tip-oops">Oops!!!</div>
+                    <div id="tip-detail"></div>
+                </div>
+            </div>
+            <div id="detail">
+                <div id='detail-message'>
+                    <p>${result}</p>
+                </div>
+
+                <div id="exception-tab" class="tab tab-selected"></div>
+                <div id="solution-tab" class="tab"></div>
+
+                <div id="exception" class="tab-content">
+                    <pre>${reason}</pre>
+                </div>
+                <div id="solution" class="tab-content">
+                    <pre>${solution}</pre>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //做下兼容，报表嵌入到含参数面板模板时，本html的国际化资源会被置于html最下面，这时候尝试用报表的国际化资源
+        var errorTipTitle;
+        var detailTitle;
+        var solutionTitle;
+        try {
+            errorTipTitle = (I18n && I18n["Fine-Dec_Error_Tip"]);
+            detailTitle = (I18n && I18n["Fine-Dec_Detail-Message"]);
+            solutionTitle = (I18n && I18n["Fine-Dec_Error-Solution"]);
+        } catch (e) {
+            errorTipTitle = (FR && FR.i18nText("Fine-Dec_Error_Tip"));
+            detailTitle = (FR && FR.i18nText("Fine-Dec_Detail-Message"));
+            solutionTitle = (FR && FR.i18nText("Fine-Dec_Error-Solution"));
+
+        }
+        document.getElementById("tip-detail").innerText = errorTipTitle;
+        document.getElementById("exception-tab").innerText = detailTitle;
+        document.getElementById("solution-tab").innerText = solutionTitle;
+
+        document.getElementById("exception-tab").onclick = function(){
+            document.getElementById("exception-tab").className = "tab tab-selected";
+            document.getElementById("solution-tab").className = "tab";
+            document.getElementById("exception").style.display = "block";
+            document.getElementById("solution").style.display = "none";
+        };
+
+        document.getElementById("solution-tab").onclick = function(){
+            document.getElementById("exception-tab").className = "tab";
+            document.getElementById("solution-tab").className = "tab tab-selected";
+            document.getElementById("exception").style.display = "none";
+            document.getElementById("solution").style.display = "block";
+        };
+    </script>
+</body>
+
+</html>

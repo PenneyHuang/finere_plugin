@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=${charset}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Hello World</title>
+    <link rel="preload" href="${fineServletURL}/resources?path=/com/fr/web/ui/font/iconfont.woff" as="font"
+          type="font/woff" crossorigin>
+    <!--css文件-->
+    ${styleTag}
+</head>
+<body>
+<div id="wrapper"></div>
+
+<script type="text/javascript">
+    window.Dec = window.Dec || {};
+    window.Dec.injection = window.Dec.injection || {};
+</script>
+
+<script type="text/javascript">
+    Dec.fineServletURL = "/webroot/decision";
+    Dec.system = JSON.parse('{\"hyperlink\":{\"scheduler\":\"http:\/\/help.finereport.com\/doc-view-663.html\",\"securityModule\":\"http:\/\/help.finereport.com\/doc-view-2453.html\",\"ExtDBConfig\":\"http:\/\/help.finereport.com\/doc-view-2458.html\",\"clusterConfig\":\"http:\/\/help.finereport.com\/doc-view-2443.html\",\"registerConfig\":\"http:\/\/help.finereport.com\/doc-view-280.html\",\"authorityManager\":\"http:\/\/help.finereport.com\/doc-view-661.html\",\"upgradeGuide\":\"http:\/\/help.finereport.com\/doc-view-2452.html\",\"decisionSystem\":\"http:\/\/help.finereport.com\/doc-view-433.html\",\"intelligence\":\"http:\/\/help.finereport.com\/doc-view-2229.html\",\"marketSMS\":\"https:\/\/market.fanruan.com\/usercenter\/sms\",\"forgetPWD\":\"http:\/\/id.fanruan.com\/forget\/forget.php?clue=activityf\",\"personalMessage\":\"https:\/\/market.fanruan.com\/usercenter\/my_message\",\"recharge\":\"https:\/\/market.fanruan.com\/usercenter\/myfinance\",\"register\":\"http:\/\/id.fanruan.com\/index.php\",\"marketCloud\":\"https:\/\/market.fanruan.com\/usercenter\/cloud_analysis\",\"spiderConfig\":\"http:\/\/help.finebi.com\/doc-view-323.html\",\"databaseKylin\":\"http:\/\/help.finereport.com\/doc-view-2542.html\",\"databaseDerby\":\"http:\/\/help.finereport.com\/doc-view-2543.html\",\"databaseVertica\":\"http:\/\/help.finereport.com\/doc-view-2544.html\",\"databaseDb2\":\"http:\/\/help.finereport.com\/doc-view-298.html\",\"databaseInformix\":\"http:\/\/help.finereport.com\/doc-view-2558.html\",\"databaseSqlserver\":\"http:\/\/help.finereport.com\/doc-view-2559.html\",\"databaseMysql\":\"http:\/\/help.finereport.com\/doc-view-2560.html\",\"databaseOracle\":\"http:\/\/help.finereport.com\/doc-view-2561.html\",\"databaseGp\":\"http:\/\/help.finereport.com\/doc-view-2562.html\",\"databasePostgre\":\"http:\/\/help.finereport.com\/doc-view-2563.html\",\"databaseAds\":\"http:\/\/help.finereport.com\/doc-view-2564.html\",\"databaseRedshift\":\"http:\/\/help.finereport.com\/doc-view-2565.html\",\"databaseImpala\":\"http:\/\/help.finereport.com\/doc-view-2567.html\",\"databasePhoenix\":\"http:\/\/help.finereport.com\/doc-view-2568.html\",\"databaseGbase8a\":\"http:\/\/help.finereport.com\/doc-view-2569.html\",\"databaseGbase8s\":\"http:\/\/help.finereport.com\/doc-view-2570.html\",\"databaseGbase8t\":\"http:\/\/help.finereport.com\/doc-view-2571.html\",\"databaseH2\":\"http:\/\/help.finereport.com\/doc-view-2572.html\",\"databaseElk\":\"http:\/\/help.finereport.com\/doc-view-2592.html\",\"databaseFusioninsight\":\"http:\/\/help.finereport.com\/doc-view-2593.html\",\"databaseHive\":\"http:\/\/help.finereport.com\/doc-view-2557.html\",\"databaseHsql\":\"http:\/\/help.finereport.com\/doc-view-2574.html\",\"databaseKingbase\":\"http:\/\/help.finereport.com\/doc-view-2575.html\",\"databasePresto\":\"http:\/\/help.finereport.com\/doc-view-2577.html\",\"databaseHana\":\"http:\/\/help.finereport.com\/doc-view-2579.html\",\"databaseSybase\":\"http:\/\/help.finereport.com\/doc-view-2580.html\",\"databaseSpark\":\"http:\/\/help.finereport.com\/doc-view-2581.html\",\"databaseSqlite\":\"http:\/\/help.finereport.com\/doc-view-2583.html\",\"databaseTeradata\":\"http:\/\/help.finereport.com\/doc-view-2584.html\",\"databaseInceptor\":\"http:\/\/help.finereport.com\/doc-view-2585.html\",\"databaseHbase\":\"http:\/\/help.finereport.com\/doc-view-2573.html\",\"databaseOther\":\"http:\/\/help.finebi.com\/doc-view-94.html\",\"databaseDws\":\"http:\/\/help.finereport.com\/doc-view-2591.html\",\"databaseLibrA\":\"http:\/\/help.finereport.com\/doc-view-2590.html\",\"smsTemplate\":\"https:\/\/market.fanruan.com\/usercenter\/sms\",\"pluginRegisterConfig\":\"http:\/\/help.finereport.com\/doc-view-1633.html\",\"tmpDirFreeSpace\":\"http:\/\/help.finereport.com\/doc-view-2523.html\",\"nonePrivilege\":\"http:\/\/help.finereport.com\/doc-view-2522.html\",\"cloudUserIncentive\":\"https:\/\/market.fanruan.com\/usercenter\/cloud_analysis\/reward\",\"features\":\"http:\/\/www.finereport.com\/product\/history\",\"toolsJar\":\"http:\/\/help.finereport.com\/doc-view-2475.html\",\"scheduleRecord\":\"http:\/\/help.finereport.com\/doc-view-2779.html\",\"httpsNginx\":\"https:\/\/help.finereport.com\/doc-view-2815.html\",\"cloudDemo\":\"http:\/\/demo.finereport.com\/decision\/view\/report?viewlet=demo\/cloud\/demo.cpt&op=view\",\"cloudCenter\":\"https:\/\/market.fanruan.com\/usercenter\/cloud_analysis\",\"recommendCluster\":\"https:\/\/help.finereport.com\/doc-view-2443.html\",\"recommendMemory\":\"https:\/\/help.finereport.com\/doc-view-1006.html\",\"registrationGuide\":\"https:\/\/help.finebi.com\/doc-view-187.html\",\"clusterRedirectParameter\":\"https:\/\/help.finereport.com\/doc-view-2979.html\",\"redisCluster\":\"https:\/\/help.finereport.com\/doc-view-2871.html\"},\"authConfig\":{\"gradeAuth\":false,\"editReportAuth\":false,\"dataConnectAuth\":false},\"styleConfig\":{\"platformTitle\":\"Hello World\",\"headerType\":2,\"logoImgId\":\"\",\"logoImgName\":\"\",\"headBgMode\":0,\"headBgImgId\":\"\",\"headBgImgName\":\"\",\"headBgColor\":\"\",\"colorScheme\":0,\"customColors\":[\"#FFFFFF\",\"#4B7EFE\",\"#2C3D59\",\"#F2F4F7\",\"#FFFFFF\",\"#3D4D66\"],\"icons\":[]},\"timeZone\":28800000,\"weekBegins\":0,\"smsAvailable\":false,\"webSocket\":{\"webSocketHostName\":\"0.0.0.0\",\"webSocketProtocol\":\"plain\",\"webSocketNameSpace\":\"\/system\",\"webSocketPort\":[38888,39888]},\"syncDataSet\":false,\"adminUser\":[\"admin\"],\"loginInfoRemind\":false,\"themeConfig\":[],\"emailAvailable\":false,\"authentication\":\"default\"}');
+    Dec.personal = JSON.parse('{\"creationType\":1,\"userExtraProps\":[\"user_product_type\",\"user_product_type.platform\",\"user_product_type.platform.mobile\"],\"displayName\":\"admin(admin)\",\"userId\":\"530a7191-c431-48de-9d28-83c68dee47d2\",\"username\":\"admin\",\"homepage\":{\"pcURL\":\"demo\/homepage\/finereport.frm\",\"homePageType\":0,\"padURL\":\"\",\"mobileURL\":\"\"}}');
+</script>
+${scriptTag}
+<script>
+    Dec.start({
+        theme: {
+            name: "custom"
+        }
+    });
+</script>
+</body>
+
+
+</html>

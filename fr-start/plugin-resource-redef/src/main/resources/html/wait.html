@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <style>
+        .main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+        }
+        .main span {
+            font-size: 12px;
+            line-height: 24px;
+            color: #3685f2;
+        }
+        .main .box {
+            position: relative;
+            top: 50%;
+            height: 24px;
+            margin-top: -12px;
+        }
+    </style>
+    <script type='text/javascript'>
+        function check() {
+            location.reload();
+        }
+
+        window.onload = function () {
+            var interval = setInterval("check()", 5000);
+        }
+    </script>
+</head>
+<body>
+${scriptTag}
+<div class="main">
+    <div class="box">
+        <span>${waitText}</span>
+        <img src="${fineServletURL}/resources?path=/com/fr/web/resources/dist/resources/wait.gif" alt="wait">
+    </div>
+</div>
+</body>
+</html>

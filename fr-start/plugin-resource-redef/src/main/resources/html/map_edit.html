@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=${charset}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>${title}</title>
+    <!--css文件-->
+    ${styleTag}
+</head>
+<body>
+<div id="wrapper"></div>
+
+<script type="text/javascript">
+    window.Dec = window.Dec || {};
+    window.Dec.injection = window.Dec.injection || {};
+</script>
+
+<script type="text/javascript">
+    Dec.fineServletURL = "${fineServletURL}";
+</script>
+${scriptTag}
+<script>
+    Dec.start = function () {
+        BI.createWidget({
+            type: "dec.management.map",
+            element: "#wrapper"
+        });
+    };
+
+    Dec.start();
+</script>
+</body>
+
+</html>

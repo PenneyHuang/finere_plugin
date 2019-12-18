@@ -4,7 +4,6 @@ import com.fr.base.TableData;
 import com.fr.design.data.tabledata.tabledatapane.AbstractTableDataPane;
 import com.fr.design.fun.impl.AbstractTableDataDefineProvider;
 import com.fr.plugin.tabledata.ws.core.WsTableData;
-import com.fr.plugin.tabledata.ws.pojo.WsFlightsResult;
 import com.fr.plugin.tabledata.ws.ui.WsTableDataPanel;
 
 /**
