@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="jar" name="plugin">
     <!-- JDK路径，根据自己机器上实际位置修改-->
-    <property name="jdk.home" value="E:\javaTool\java\jdk1.8.0_162"/>
+    <property name="jdk.home" value="E:\java\jdk1.8.0_231"/>
 
     <property name="libs" value="${basedir}/lib"/>
     <property name="publicLibs" value=""/>

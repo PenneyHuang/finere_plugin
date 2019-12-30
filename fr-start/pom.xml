@@ -11,6 +11,7 @@
         <module>plugin-JSSCSSInput</module>
         <module>plugin-resource-redef</module>
         <module>plugin-locale</module>
+        <module>plugin-widget</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
