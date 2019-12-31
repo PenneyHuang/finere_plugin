@@ -7,7 +7,15 @@ import com.fr.design.mainframe.widget.editors.AbstractPropertyEditor;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-
+/**
+* @Description:    属性设置面板
+* @Author:         penney
+* @CreateDate:     2019/12/31 10:20
+* @UpdateUser:
+* @UpdateDate:     2019/12/31 10:20
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 public class StyleColorAttrEditor extends AbstractPropertyEditor {
     /**
      * 一个设置字体颜色的按钮。

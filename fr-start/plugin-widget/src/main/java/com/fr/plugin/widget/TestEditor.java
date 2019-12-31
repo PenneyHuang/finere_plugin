@@ -10,7 +10,7 @@ import java.awt.*;
 import java.beans.IntrospectionException;
 
 /**
- * @Description: 参数界面、表单界面，控件的界面设计类
+ * @Description: 参数面板、表单界面，控件的界面展示类
  * @Author: penney
  * @CreateDate: 2019/12/30 11:13
  * @UpdateUser:

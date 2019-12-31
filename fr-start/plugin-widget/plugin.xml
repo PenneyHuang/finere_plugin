@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plugin>
-    <id>com.fr.plugin.tabledata.ws</id>
+    <id>com.fr.plugin</id>
     <name><![CDATA[自定义控件插件]]></name>
     <active>yes</active>
     <version>1.0</version>
