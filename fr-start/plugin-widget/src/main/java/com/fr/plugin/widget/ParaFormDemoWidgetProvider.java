@@ -27,7 +27,7 @@ public class ParaFormDemoWidgetProvider extends AbstractParameterWidgetOptionPro
 
     @Override
     public String iconPathForWidget() {
-        return "/com/fr/plugin/web/image/text_field_16.png";
+        return "/web/image/text_field_15.png";
     }
 
     @Override

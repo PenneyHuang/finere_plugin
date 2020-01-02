@@ -13,15 +13,15 @@
     ]]></change-notes>
     <!--加载到核心模块-->
 	<function-recorder class="com.fr.plugin.widget.DemoWidget"></function-recorder>
-    <extra-core>
-        <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>
-        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
-    </extra-core>
-    <!--加载到表单模块-->
-    <extra-form>
-        <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>
-        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
-    </extra-form>
+<!--    <extra-core>-->
+<!--        <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>-->
+<!--        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>-->
+<!--    </extra-core>-->
+<!--    &lt;!&ndash;加载到表单模块&ndash;&gt;-->
+<!--    <extra-form>-->
+<!--        <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>-->
+<!--        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>-->
+<!--    </extra-form>-->
     <!--加载到报表模块-->
     <extra-report>
         <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>

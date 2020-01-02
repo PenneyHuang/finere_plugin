@@ -16,6 +16,6 @@ public class ReportJavaScriptFileHandler extends AbstractJavaScriptFileHandler {
 
     @Override
     public String[] pathsForFiles() {
-        return new String[]{"/com/fr/plugin/web/js/text.js"};
+        return new String[]{"/web/js/text.js"};
     }
 }
