@@ -14,7 +14,7 @@
     <!-- 插件版本-->
     <property name="plugin-version" value="${current-version}"/>
     <!-- 插件名字-->
-    <property name="plugin-name" value="tabledata-ws"/>
+    <property name="plugin-name" value="plugin-widget"/>
     <property name="plugin-jar" value="fr-plugin-${plugin-name}-${plugin-version}.jar"/>
 
     <target name="prepare">

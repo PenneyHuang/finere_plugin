@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plugin>
-    <id>com.fr.plugin</id>
+    <id>com.fr.plugin.widget</id>
     <name><![CDATA[自定义控件插件]]></name>
     <active>yes</active>
     <version>1.0</version>
@@ -12,36 +12,24 @@
       [2019-12-30]初始化插件<br/>
     ]]></change-notes>
     <!--加载到核心模块-->
+	<function-recorder class="com.fr.plugin.widget.DemoWidget"></function-recorder>
     <extra-core>
         <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>
+        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
     </extra-core>
     <!--加载到表单模块-->
     <extra-form>
         <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>
+        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
     </extra-form>
     <!--加载到报表模块-->
     <extra-report>
         <JavaScriptFileHandler class="com.fr.plugin.report.ReportJavaScriptFileHandler"/>
-    </extra-report>
-    <!--加载到核心模块-->
-    <extra-core>
-        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
-    </extra-core>
-    <!--加载到报表模块-->
-    <extra-form>
-        <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
-    </extra-form>
-    <!--加载到表单模块-->
-    <extra-report>
         <CssFileHandler class="com.fr.plugin.report.ReportCssFileHandler"/>
     </extra-report>
     <extra-designer>
         <ParameterWidgetOptionProvider class="com.fr.plugin.widget.ParaFormDemoWidgetProvider"/>
-    </extra-designer>
-    <extra-designer>
         <FormWidgetOptionProvider class="com.fr.plugin.widget.ParaFormDemoWidgetProvider"/>
-    </extra-designer>
-    <extra-designer>
         <CellWidgetOptionProvider class="com.fr.plugin.widget.cell.DemoCellWidgetOptionProvider"/>
     </extra-designer>
 

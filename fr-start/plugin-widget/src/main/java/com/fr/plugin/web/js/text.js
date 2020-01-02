@@ -2,7 +2,7 @@
     /**
      * 还是直接继承默认的文本框对象,默认的文本框就是FR.TextEditor
      */
-    FR.StyleTextEditor=FR.extend(FR.TextEditor,{
+    FR.StyleTextEditor = FR.extend(FR.TextEditor, {
         /**
          * 初始化方法,
          * @private
@@ -16,11 +16,11 @@
          * @returns {*|jQuery|HTMLElement}
          * @private
          */
-        _createEditComp: function() {
+        _createEditComp: function () {
 
-            var o=this.options;
+            var o = this.options;
 
-            return $("<input style='color:"+o.fontColor+"' type='text'/>");//返回的文本框带上颜色属性
+            return $("<input style='color:" + o.fontColor + "' type='text'/>");//返回的文本框带上颜色属性
         }
     })
     /**

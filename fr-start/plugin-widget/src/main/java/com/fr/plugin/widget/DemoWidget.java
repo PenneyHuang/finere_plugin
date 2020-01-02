@@ -2,8 +2,12 @@ package com.fr.plugin.widget;
 
 import com.fr.form.ui.TextEditor;
 import com.fr.general.ComparatorUtils;
+import com.fr.intelli.record.Focus;
+import com.fr.intelli.record.Original;
 import com.fr.json.JSONException;
 import com.fr.json.JSONObject;
+import com.fr.plugin.transform.FunctionRecorder;
+import com.fr.record.analyzer.EnableMetrics;
 import com.fr.script.Calculator;
 import com.fr.stable.StableUtils;
 import com.fr.stable.core.NodeVisitor;
@@ -22,6 +26,8 @@ import java.awt.*;
  * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
+@EnableMetrics
+@FunctionRecorder(localeKey = "FR-Widget_Plugin-Name")
 public class DemoWidget extends TextEditor {
     /**
      * 新增一个颜色属性
@@ -49,6 +55,7 @@ public class DemoWidget extends TextEditor {
      * @return
      * @throws JSONException
      */
+    @Focus(id = "com.fr.plugin.widget", text = "FR-Widget_Plugin-Name", source = Original.PLUGIN)
     @Override
     public JSONObject createJSONConfig(Repository repository, Calculator calculator, NodeVisitor nodeVisitor) throws JSONException {
         return super.createJSONConfig(repository, calculator, nodeVisitor).put("fontColor", StableUtils.javaColorToCSSColor(this.fontColor));
@@ -117,4 +124,4 @@ public class DemoWidget extends TextEditor {
     }
 
 
-} 
+}
